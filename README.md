@@ -1,5 +1,5 @@
 # HybridMobileApp
 Built using Cordova and uses the Geolocation plugin. 
 
-#PLUGIN COMMAND
+# PLUGIN COMMAND
 cordova plugin add cordova-plugin-geolocation
