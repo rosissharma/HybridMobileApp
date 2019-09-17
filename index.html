@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geo Location</title>
+    <!-- link the stylesheet from the css folder -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- link the javascript file from the js folder -->
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- Labels to display the Latitude and Longitude -->
+    <div style="text-align:center">
+        <h1>LOCATION INFORMATION</h1>
+        <p id="lat">Latitude: </p>
+        <p id="lng">Longitude: </p>
+    </div>
+
+    <!-- A box that shows the current local time and date -->
+    <div class="boxed" onclick="time()">
+        <span style="display:block" id="time"></span>
+    </div>
+
+    <!-- Label for the location -->
+    <div align="center">
+        <p id="location" class="place"></p>
+    </div>
+
+    <div>
+        <!-- Select dropdown with 3 location options -->
+        <select id="address" onchange="changeLocation( this );">
+            <option value="43.1610,-77.6109">Rochester, NY</option>
+            <option value="41.8781,-87.6298">Chicago, IL</option>
+            <option value="48.8589507,2.2770202">Paris</option>
+        </select>
+
+        <!-- To turn the traffic layer on/off -->
+        <p style="display: inline;">Toggle Traffic</p>
+        <input class="toggleCheck" id="toggle" type="checkbox" onclick="toggle()">
+        <label class="toggleBtn" for="toggle" style="display: inline-block;"></label>
+    </div>
+
+    <!-- The map area -->
+    <div id="map-canvas">
+        <h3>Loading map. Please wait...</h3>
+    </div>
+
+    <script
+        src="https://maps.google.com/maps/api/js?key=AIzaSyAjEeY_9DXTGhb33LRNowQZ3XCBaFDju6Q&callback=initMap"></script>
+</body>
+
+</html>

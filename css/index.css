@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    color: wheat;
+    background: url('https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png');
+    opacity: 0.95;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body p {
+    font-size: 20px;
+    margin: 10px;
+    padding: 0;
+}
+
+body p.place {
+    border: 1px solid wheat;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    width: 50%;
+    height: 10%;
+}
+
+body select {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#map-canvas {
+    height: 50%;
+    width: 100%;
+    top: 1.5%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#address {
+    position: static;
+    left: 50%;
+    background-color: #333;
+    color: wheat;
+    padding: .5em;
+}
+
+.toggleCheck {
+    display: none;
+}
+
+.toggleBtn {
+    display: block;
+    padding: 2px;
+    width: 40px;
+    height: 20px;
+    border-radius: 40px;
+    background: #333;
+    transition: 240ms;
+}
+
+.toggleBtn::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    background: #fff;
+    transition: 240ms;
+}
+
+.toggleCheck:checked+.toggleBtn {
+    background: #2196F3;
+}
+
+.toggleCheck:checked+.toggleBtn::after {
+    transform: translateX(100%);
+}
+
+.boxed {
+    border: 1px solid wheat;
+    width: 50%;
+    height: 10%;
+    align-content: center;
+    background: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
